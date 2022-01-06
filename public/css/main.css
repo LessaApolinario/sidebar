@@ -44,7 +44,7 @@ body {
   justify-content: space-between;
 }
 
-.container .sidebar header {
+.container .sidebar header.open {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,3 +90,18 @@ ul {
 }
 
 /* Crie uma classe .close para cada elemento da sidebar */
+header.close {
+  display: block;
+}
+
+.sidebar.close {
+  flex: 0;  
+}
+
+.container section.close {
+  flex: 1 100%;
+}
+
+li.close {
+  background-color: var(--light-grey);
+}
