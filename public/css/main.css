@@ -5,3 +5,7 @@
   --light-grey: #dce4e3;
   --text-color: #084236;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
