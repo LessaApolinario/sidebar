@@ -39,6 +39,9 @@ body {
 
   background-color: var(--green);
 
+  -webkit-transition: flex 1s;
+  transition: flex 1s;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -108,6 +111,9 @@ aside.sidebar.close {
   flex: 0;
 
   align-items: center;
+
+  -webkit-transition: flex 1s;
+  transition: flex 1s;
 }
 
 aside.sidebar.close nav ul li {
