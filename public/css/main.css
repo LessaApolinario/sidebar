@@ -35,7 +35,7 @@ body {
 .container .sidebar {
   flex: 1 20%;
 
-  height: 100vh;
+  min-height: 100vh;
 
   background-color: var(--green);
 
@@ -56,21 +56,25 @@ body {
   flex: 2;
 }
 
+nav ul {
+  list-style: none;
+  padding: 0.6rem;
+}
+
 .selected {
   background-color: var(--light-green);
 }
 
 li {
-  border-radius: 0.4rem;
-  padding: 0.6rem;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-ul {
-  list-style: none;
-  padding: 0.6rem;
-}
-
-.container .sidebar footer {
+.container .sidebar footer.menu-end {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,27 +85,40 @@ ul {
   padding: 0.5rem;
 
   background-color: var(--light-green);
+
+  width: 100%;
 }
 
-.container .sidebar footer img.person {
+.container .sidebar footer.menu-end img.person {
   width: 4rem;
   height: auto;
   border-radius: 0.4rem;
 }
 
-/* Crie uma classe .close para cada elemento da sidebar */
-header.close {
-  display: block;
+img.person + p {
+  flex: 1;
 }
 
-.sidebar.close {
-  flex: 0;  
-}
-
-.container section.close {
+/* Criar uma classe .close para cada elemento da sidebar */
+.container.close {
   flex: 1 100%;
 }
 
-li.close {
-  background-color: var(--light-grey);
+aside.sidebar.close {
+  flex: 0;
+
+  align-items: center;
+}
+
+aside.sidebar.close nav ul li {
+  padding: 0.8rem;
+}
+
+footer.close {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hidden {
+  display: none;
 }
